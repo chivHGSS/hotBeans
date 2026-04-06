@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title shown in the browser tab -->
+    <title>Hot Beans Web - Home</title>
+
+    <!-- Link to the main external stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER
+         Contains the company logo and login box
+         ============================================ -->
+    <div id="header">
+
+        <!-- Company logo and name -->
+        <div id="logo">
+            <!-- Simple SVG house/computer icon representing a web company -->
+            <svg id="logo-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <!-- Monitor screen shape -->
+                <rect x="8" y="10" width="44" height="28" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
+                <!-- Monitor stand -->
+                <line x1="30" y1="38" x2="30" y2="48" stroke="white" stroke-width="2.5"/>
+                <!-- Monitor base -->
+                <line x1="20" y1="48" x2="40" y2="48" stroke="white" stroke-width="2.5"/>
+                <!-- House roof inside monitor -->
+                <polyline points="18,28 30,16 42,28" fill="none" stroke="white" stroke-width="2"/>
+                <!-- House door -->
+                <rect x="26" y="24" width="8" height="8" fill="none" stroke="white" stroke-width="1.5"/>
+            </svg>
+            <!-- Company name in script font -->
+            <span id="site-name">Hot Beans</span>
+        </div>
+
+        <!-- Login box — top right of header -->
+        <div id="login-box">
+            <!-- Username field -->
+            <label>
+                Username
+                <input type="text" id="username" name="username">
+            </label>
+            <!-- Password field -->
+            <label>
+                Password
+                <input type="password" id="password" name="password">
+            </label>
+            <!-- Forgot password link (no server action — placeholder) -->
+            <span id="forgot-password">(forgot password?)</span>
+        </div>
+
+    </div><!-- end #header -->
+
+
+    <!-- ============================================
+         NAVIGATION BAR
+         Links to all main pages of the site
+         ============================================ -->
+    <div id="navbar">
+        <!-- HOME is marked as active on this page -->
+        <a href="index.html" class="active">HOME</a>
+        <a href="news.html">NEWS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="staff.html">STAFF</a>
+        <a href="customers.html">CUSTOMERS</a>
+        <a href="joinus.html">JOIN US</a>
+        <a href="about.html">ABOUT</a>
+
+        <!-- Search box pushed to the far right with margin-left:auto in CSS -->
+        <div id="nav-search">
+            <div id="search-form">
+                <!-- Search input — calls searchKeyPress on key events -->
+                <input type="text" id="search-input" placeholder="Search..." onkeypress="searchKeyPress(event)">
+                <!-- Search button — calls doSearch() in script.js -->
+                <button id="search-btn" onclick="doSearch()">Go</button>
+            </div>
+        </div>
+
+    </div><!-- end #navbar -->
+
+
+    <!-- ============================================
+         MAIN CONTENT
+         Three-column layout as shown in wireframe
+         ============================================ -->
+    <div id="main-content">
+
+        <div class="three-col">
+
+            <!-- ---- LEFT COLUMN: Company Profile ---- -->
+            <div class="col-left">
+                <div class="card">
+                    <h2>Company Profile / About Us</h2>
+
+                    <p>Hot Beans Web is a growing web development company based in the UK.
+                       We build professional, user-friendly websites for businesses of all sizes.</p>
+
+                    <p>Founded in 2010, our experienced team of developers and designers deliver
+                       high-quality digital solutions tailored to each client's needs.</p>
+
+                    <p>We specialise in HTML, CSS, JavaScript, and database-driven websites.
+                       Our clients range from small local businesses to large organisations.</p>
+
+                    <p>We are always looking for talented, passionate individuals to join our team.
+                       See our <a href="joinus.html">Join Us</a> page for current vacancies.</p>
+
+                    <p>For more information about our services, please visit our
+                       <a href="about.html">About</a> page or <a href="contact.html">Contact</a> us directly.</p>
+                </div>
+            </div><!-- end col-left -->
+
+
+            <!-- ---- MIDDLE COLUMN: Images + Text ---- -->
+            <div class="col-mid">
+
+                <!-- Image grid box -->
+                <div class="card">
+                    <h2>Selection of Hot Beans Images</h2>
+                    <!-- 2x2 grid of image placeholders -->
+                    <div class="image-grid">
+                        <div class="img-placeholder"><img src="images/one.jpg" alt="Description"></div>
+                        <div class="img-placeholder"><img src="images/two.jpg" alt="Description"></div>
+                        <div class="img-placeholder"><img src="images/three.jpg" alt="Description"></div>
+                        <div class="img-placeholder"><img src="images/four.jpg" alt="Description"></div>
+                    </div>
+                </div>
+
+                <!-- Text content box below images -->
+                <div class="card">
+                    <h2>TEXT</h2>
+                    <p>Our team creates clean, modern websites using the latest web technologies.</p>
+                    <p>We pride ourselves on delivering projects on time and within budget.</p>
+                    <p>Contact us today to discuss your next project.</p>
+                </div>
+
+            </div><!-- end col-mid -->
+
+
+            <!-- ---- RIGHT COLUMN: Images + Text ---- -->
+            <div class="col-right">
+
+                <!-- Image grid box -->
+                <div class="card">
+                    <h2>Selection of Hot Beans Images</h2>
+                    <!-- 2x2 grid of image placeholders -->
+                    <div class="image-grid">
+                        <div class="img-placeholder"><img src="images/five.jpg" alt="Description"></div>
+                        <div class="img-placeholder"><img src="images/six.jpg" alt="Description"></div>
+                        <div class="img-placeholder"><img src="images/seven.jpg" alt="Description"></div>
+                        <div class="img-placeholder"><img src="images/eight.jpg" alt="Description"></div>
+                    </div>
+                </div>
+
+                <!-- Text content box below images -->
+                <div class="card">
+                    <h2>TEXT</h2>
+                    <p>We offer competitive rates and flexible packages for all budgets.</p>
+                    <p>Our developers stay up to date with industry standards and best practices.</p>
+                    <p>Visit our <a href="staff.html">Staff</a> page to meet the team.</p>
+                </div>
+
+            </div><!-- end col-right -->
+
+        </div><!-- end .three-col -->
+
+    </div><!-- end #main-content -->
+
+
+    <!-- ============================================
+         FOOTER
+         Simple copyright and navigation links
+         ============================================ -->
+    <div id="footer">
+        <!-- Copyright notice -->
+        &copy; chivovoHGSS 2026 Hot Beans Web Ltd. All rights reserved. |
+        <!-- Quick footer links -->
+        <a href="contact.html">Contact Us</a> |
+        <a href="about.html">About</a> |
+        <a href="joinus.html">Join Us</a>
+    </div><!-- end #footer -->
+
+
+    <!-- Link to the local JavaScript file -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

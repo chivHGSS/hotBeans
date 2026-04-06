@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title shown in the browser tab -->
+    <title>Hot Beans Web - About Us</title>
+
+    <!-- Link to the main external stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER
+         Same header used across all pages
+         ============================================ -->
+    <div id="header">
+        <div id="logo">
+            <!-- Company logo SVG icon -->
+            <svg id="logo-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="44" height="28" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
+                <line x1="30" y1="38" x2="30" y2="48" stroke="white" stroke-width="2.5"/>
+                <line x1="20" y1="48" x2="40" y2="48" stroke="white" stroke-width="2.5"/>
+                <polyline points="18,28 30,16 42,28" fill="none" stroke="white" stroke-width="2"/>
+                <rect x="26" y="24" width="8" height="8" fill="none" stroke="white" stroke-width="1.5"/>
+            </svg>
+            <span id="site-name">Hot Beans</span>
+        </div>
+
+        <!-- Login box -->
+        <div id="login-box">
+            <label>Username <input type="text"></label>
+            <label>Password <input type="password"></label>
+            <span id="forgot-password">(forgot password?)</span>
+        </div>
+    </div><!-- end #header -->
+
+
+    <!-- ============================================
+         NAVIGATION BAR
+         ABOUT is marked active on this page
+         ============================================ -->
+    <div id="navbar">
+        <a href="index.html">HOME</a>
+        <a href="news.html">NEWS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="staff.html">STAFF</a>
+        <a href="customers.html">CUSTOMERS</a>
+        <a href="joinus.html">JOIN US</a>
+        <!-- ABOUT is the current page so it gets the active class -->
+        <a href="about.html" class="active">ABOUT</a>
+        <div id="nav-search">
+            <div id="search-form">
+                <input type="text" id="search-input" placeholder="Search..." onkeypress="searchKeyPress(event)">
+                <button id="search-btn" onclick="doSearch()">Go</button>
+            </div>
+        </div>
+    </div><!-- end #navbar -->
+
+
+    <!-- ============================================
+         MAIN CONTENT
+         Company Profile and Courses link sections
+         ============================================ -->
+    <div id="main-content">
+
+        <!-- Page heading -->
+        <h1 class="page-heading">About Hot Beans Web</h1>
+
+        <!-- Two-column layout for About content -->
+        <div class="three-col">
+
+            <!-- ---- LEFT: Company Profile text ---- -->
+            <div class="col-left">
+                <div class="card">
+                    <h2>Company Profile</h2>
+
+                    <p>Hot Beans Web was established in 2010 with the aim of providing affordable,
+                       high-quality web development services to UK businesses.</p>
+
+                    <p>We are a team of passionate developers, designers, and project managers
+                       who believe the web should be accessible to everyone.</p>
+
+                    <p>Our office is based in the UK and we work with clients nationally and internationally.</p>
+
+                    <p>We follow best practice standards in all our work, ensuring websites are
+                       accessible, fast, and easy to use.</p>
+                </div>
+
+                <!-- Image placeholder for About page -->
+                <div class="card">
+                    <h2>Our Office</h2>
+                    <div class="img-placeholder" style="height:120px; width:100%;">Office Image</div>
+                </div>
+            </div><!-- end col-left -->
+
+
+            <!-- ---- RIGHT: More detail and courses link ---- -->
+            <div style="flex:1;">
+                <div class="card">
+                    <h2>What We Do</h2>
+
+                    <p>Hot Beans Web specialises in:</p>
+
+                    <!-- Simple list of services -->
+                    <ul style="padding-left:20px; font-size:14px; color:#333; margin-top:8px;">
+                        <li>Website design and development</li>
+                        <li>E-commerce solutions</li>
+                        <li>Content management systems (CMS)</li>
+                        <li>Database design and management</li>
+                        <li>Mobile-responsive design</li>
+                        <li>Website maintenance and support</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>Our Values</h2>
+                    <p>We believe in honest communication, fair pricing, and delivering results that exceed expectations.</p>
+                    <p>Every project is treated with the same care and attention, regardless of size or budget.</p>
+                </div>
+
+                <!-- ---- Courses / Training section (link per sitemap) ---- -->
+                <div class="card">
+                    <h2>Link to Courses</h2>
+                    <p>We recommend the following external courses for anyone interested
+                       in web development. These are used by our own staff for training:</p>
+
+                    <!-- Courses table with external links -->
+                    <div class="courses-table-wrapper"><table class="courses-table">
+                        <thead>
+                            <tr>
+                                <th>Course Name</th>
+                                <th>Provider</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Each row is a course with an external link -->
+                            <tr>
+                                <td><a href="https://www.w3schools.com/html/" target="_blank">HTML Fundamentals</a></td>
+                                <td>W3Schools</td>
+                                <td>Beginner</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.w3schools.com/css/" target="_blank">CSS Basics</a></td>
+                                <td>W3Schools</td>
+                                <td>Beginner</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.w3schools.com/js/" target="_blank">JavaScript Essentials</a></td>
+                                <td>W3Schools</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.freecodecamp.org/" target="_blank">Responsive Web Design</a></td>
+                                <td>freeCodeCamp</td>
+                                <td>Beginner</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.coursera.org/" target="_blank">Full Stack Web Development</a></td>
+                                <td>Coursera</td>
+                                <td>Advanced</td>
+                            </tr>
+                        </tbody>
+                    </table></div><!-- end courses-table-wrapper -->
+                </div>
+
+            </div><!-- end right column -->
+
+        </div><!-- end .three-col -->
+
+    </div><!-- end #main-content -->
+
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <div id="footer">
+        &copy; chivovoHGSS 2026 Hot Beans Web Ltd. All rights reserved. |
+        <a href="contact.html">Contact Us</a> |
+        <a href="about.html">About</a> |
+        <a href="joinus.html">Join Us</a>
+    </div><!-- end #footer -->
+
+    <!-- Local JavaScript file -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

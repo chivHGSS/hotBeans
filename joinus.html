@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title shown in the browser tab -->
+    <title>Hot Beans Web - Join Us</title>
+
+    <!-- Link to the main external stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <div id="header">
+        <div id="logo">
+            <svg id="logo-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="44" height="28" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
+                <line x1="30" y1="38" x2="30" y2="48" stroke="white" stroke-width="2.5"/>
+                <line x1="20" y1="48" x2="40" y2="48" stroke="white" stroke-width="2.5"/>
+                <polyline points="18,28 30,16 42,28" fill="none" stroke="white" stroke-width="2"/>
+                <rect x="26" y="24" width="8" height="8" fill="none" stroke="white" stroke-width="1.5"/>
+            </svg>
+            <span id="site-name">Hot Beans</span>
+        </div>
+        <div id="login-box">
+            <label>Username <input type="text"></label>
+            <label>Password <input type="password"></label>
+            <span id="forgot-password">(forgot password?)</span>
+        </div>
+    </div><!-- end #header -->
+
+
+    <!-- ============================================
+         NAVIGATION BAR
+         JOIN US is marked active on this page
+         ============================================ -->
+    <div id="navbar">
+        <a href="index.html">HOME</a>
+        <a href="news.html">NEWS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="staff.html">STAFF</a>
+        <a href="customers.html">CUSTOMERS</a>
+        <!-- JOIN US is the current page -->
+        <a href="joinus.html" class="active">JOIN US</a>
+        <a href="about.html">ABOUT</a>
+        <div id="nav-search">
+            <div id="search-form">
+                <input type="text" id="search-input" placeholder="Search..." onkeypress="searchKeyPress(event)">
+                <button id="search-btn" onclick="doSearch()">Go</button>
+            </div>
+        </div>
+    </div><!-- end #navbar -->
+
+
+    <!-- ============================================
+         MAIN CONTENT
+         Per sitemap: Application Process ->
+         Job Specification + Application Form
+         ============================================ -->
+    <div id="main-content">
+
+        <!-- Page heading -->
+        <h1 class="page-heading">Join the Hot Beans Team</h1>
+
+        <!-- Two-column layout — job spec left, form right -->
+        <div class="three-col">
+
+            <!-- ---- LEFT: Job Specification ---- -->
+            <div class="col-left">
+                <div class="card">
+                    <h2>Job Specification</h2>
+
+                    <p><strong>Role:</strong> Junior Web Developer</p>
+                    <p><strong>Location:</strong> UK (Hybrid)</p>
+                    <p><strong>Salary:</strong> Competitive</p>
+                    <p><strong>Hours:</strong> Full time, 37.5 hrs/week</p>
+
+                    <!-- Divider line -->
+                    <hr style="margin:10px 0; border-color:#b0c4de;">
+
+                    <p><strong>About the Role:</strong></p>
+                    <p>We are looking for an enthusiastic junior web developer to join our growing team.
+                       You will work alongside experienced developers on real client projects.</p>
+
+                    <p><strong>Requirements:</strong></p>
+                    <!-- Requirements list -->
+                    <ul style="padding-left:18px; font-size:13px; color:#333; margin-top:6px;">
+                        <li>Knowledge of HTML, CSS and JavaScript</li>
+                        <li>Understanding of responsive design</li>
+                        <li>Good communication skills</li>
+                        <li>Ability to work as part of a team</li>
+                        <li>Willingness to learn new technologies</li>
+                    </ul>
+
+                    <p style="margin-top:10px;"><strong>Desirable:</strong></p>
+                    <ul style="padding-left:18px; font-size:13px; color:#333; margin-top:6px;">
+                        <li>Experience with PHP or Python</li>
+                        <li>Knowledge of MySQL or similar databases</li>
+                        <li>A portfolio of previous work</li>
+                    </ul>
+                </div>
+
+                <!-- External Courses section per sitemap -->
+                <div class="card">
+                    <h2>External Courses</h2>
+                    <p>Not quite ready to apply? Improve your skills with these free online courses:</p>
+                    <ul style="padding-left:18px; font-size:13px; color:#333; margin-top:8px; line-height:2;">
+                        <!-- External links open in a new tab -->
+                        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a> — HTML &amp; CSS</li>
+                        <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a> — Full Web Dev</li>
+                        <li><a href="https://www.coursera.org" target="_blank">Coursera</a> — Computer Science</li>
+                        <li><a href="https://www.codecademy.com" target="_blank">Codecademy</a> — Web Development</li>
+                    </ul>
+                </div>
+            </div><!-- end col-left -->
+
+
+            <!-- ---- RIGHT: Application Form ---- -->
+            <div style="flex:1;">
+                <div class="card form-section">
+                    <h2>Application Form</h2>
+
+                    <!-- Confirmation message — hidden until form is submitted -->
+                    <!-- The JS function submitApplication() will show this -->
+                    <div id="submit-message">
+                        &#10003; Application Submitted! Thank you for applying to Hot Beans Web.
+                        We will be in touch soon.
+                    </div>
+
+                    <!-- Application form — id used by JavaScript to find and clear fields -->
+                    <div id="application-form">
+
+                        <!-- Full name field -->
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Your full name">
+                        </div>
+
+                        <!-- Email address field -->
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+                        </div>
+
+                        <!-- Phone number field -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. 07700 900000">
+                        </div>
+
+                        <!-- Role applying for — dropdown -->
+                        <div class="form-group">
+                            <label for="role">Role Applying For *</label>
+                            <select id="role" name="role">
+                                <!-- Default empty option -->
+                                <option value="">-- Please select --</option>
+                                <option value="junior-dev">Junior Web Developer</option>
+                                <option value="designer">UI / UX Designer</option>
+                                <option value="backend">Back-End Developer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Education / qualifications -->
+                        <div class="form-group">
+                            <label for="education">Education &amp; Qualifications</label>
+                            <textarea id="education" name="education" placeholder="List your relevant qualifications and education..."></textarea>
+                        </div>
+
+                        <!-- Work experience -->
+                        <div class="form-group">
+                            <label for="experience">Work Experience</label>
+                            <textarea id="experience" name="experience" placeholder="Describe any relevant work experience..."></textarea>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="form-group">
+                            <label for="skills">Technical Skills</label>
+                            <textarea id="skills" name="skills" placeholder="e.g. HTML, CSS, JavaScript, PHP..."></textarea>
+                        </div>
+
+                        <!-- Why do you want to join -->
+                        <div class="form-group">
+                            <label for="why-apply">Why do you want to join Hot Beans Web? *</label>
+                            <textarea id="why-apply" name="why-apply" placeholder="Tell us why you want to work with us..."></textarea>
+                        </div>
+
+                        <!-- Submit button — calls submitApplication() in script.js -->
+                        <!-- onclick triggers the JS function that clears fields and shows message -->
+                        <button class="btn-submit" onclick="submitApplication()">Submit Application</button>
+
+                        <!-- Small note about required fields -->
+                        <p style="font-size:12px; color:#666; margin-top:8px;">* Required fields</p>
+
+                    </div><!-- end #application-form -->
+
+                </div><!-- end .card form-section -->
+            </div><!-- end right column -->
+
+        </div><!-- end .three-col -->
+
+    </div><!-- end #main-content -->
+
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <div id="footer">
+        &copy; chivovoHGSS 2026 Hot Beans Web Ltd. All rights reserved. |
+        <a href="contact.html">Contact Us</a> |
+        <a href="about.html">About</a> |
+        <a href="joinus.html">Join Us</a>
+    </div><!-- end #footer -->
+
+    <!-- Local JavaScript file -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

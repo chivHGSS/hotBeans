@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title shown in the browser tab -->
+    <title>Hot Beans Web - Staff</title>
+
+    <!-- Link to the main external stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <div id="header">
+        <div id="logo">
+            <svg id="logo-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="44" height="28" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
+                <line x1="30" y1="38" x2="30" y2="48" stroke="white" stroke-width="2.5"/>
+                <line x1="20" y1="48" x2="40" y2="48" stroke="white" stroke-width="2.5"/>
+                <polyline points="18,28 30,16 42,28" fill="none" stroke="white" stroke-width="2"/>
+                <rect x="26" y="24" width="8" height="8" fill="none" stroke="white" stroke-width="1.5"/>
+            </svg>
+            <span id="site-name">Hot Beans</span>
+        </div>
+        <div id="login-box">
+            <label>Username <input type="text"></label>
+            <label>Password <input type="password"></label>
+            <span id="forgot-password">(forgot password?)</span>
+        </div>
+    </div><!-- end #header -->
+
+
+    <!-- ============================================
+         NAVIGATION BAR
+         STAFF is marked active on this page
+         ============================================ -->
+    <div id="navbar">
+        <a href="index.html">HOME</a>
+        <a href="news.html">NEWS</a>
+        <a href="contact.html">CONTACT</a>
+        <!-- STAFF is the current page -->
+        <a href="staff.html" class="active">STAFF</a>
+        <a href="customers.html">CUSTOMERS</a>
+        <a href="joinus.html">JOIN US</a>
+        <a href="about.html">ABOUT</a>
+        <div id="nav-search">
+            <div id="search-form">
+                <input type="text" id="search-input" placeholder="Search..." onkeypress="searchKeyPress(event)">
+                <button id="search-btn" onclick="doSearch()">Go</button>
+            </div>
+        </div>
+    </div><!-- end #navbar -->
+
+
+    <!-- ============================================
+         MAIN CONTENT
+         Staff page with individual staff profiles
+         Per sitemap: Staff Page -> Staff Profiles
+         ============================================ -->
+    <div id="main-content">
+
+        <!-- Page heading -->
+        <h1 class="page-heading">Our Staff</h1>
+
+        <!-- Short introduction paragraph -->
+        <div class="card" style="margin-bottom:20px;">
+            <p>Meet the talented team behind Hot Beans Web. Our staff have a wide range of skills
+               and experience in web development, design, and project management.</p>
+        </div>
+
+        <!-- ---- Staff Profiles Grid ---- -->
+        <!-- Flex layout — 3 cards per row defined in CSS -->
+        <div class="staff-grid">
+
+            <!-- ---- Staff Member 1 ---- -->
+            <div class="staff-card">
+                <!-- Photo placeholder (replace src with actual image path when available) -->
+                <div class="staff-photo-placeholder">Photo</div>
+                <!-- Staff name -->
+                <h3>James Harper</h3>
+                <!-- Job title -->
+                <p class="job-title">Lead Developer</p>
+                <!-- Short bio -->
+                <p>James has over 10 years of experience in full-stack web development.
+                   He leads our development team and oversees all client projects.</p>
+                <!-- Key skills -->
+                <p style="margin-top:6px; font-size:12px; color:#0058a3;">
+                    <strong>Skills:</strong> HTML, CSS, JavaScript, PHP, MySQL
+                </p>
+            </div><!-- end staff-card -->
+
+            <!-- ---- Staff Member 2 ---- -->
+            <div class="staff-card">
+                <div class="staff-photo-placeholder">Photo</div>
+                <h3>Sarah Collins</h3>
+                <p class="job-title">UI / UX Designer</p>
+                <p>Sarah creates beautiful, user-friendly designs. She works closely with clients
+                   to understand their needs and turn ideas into engaging interfaces.</p>
+                <p style="margin-top:6px; font-size:12px; color:#0058a3;">
+                    <strong>Skills:</strong> Figma, Photoshop, CSS, Accessibility
+                </p>
+            </div><!-- end staff-card -->
+
+            <!-- ---- Staff Member 3 ---- -->
+            <div class="staff-card">
+                <div class="staff-photo-placeholder">Photo</div>
+                <h3>David Patel</h3>
+                <p class="job-title">Back-End Developer</p>
+                <p>David manages server-side development and database architecture.
+                   He ensures all our websites are fast, secure, and reliable.</p>
+                <p style="margin-top:6px; font-size:12px; color:#0058a3;">
+                    <strong>Skills:</strong> PHP, Python, MySQL, Server Admin
+                </p>
+            </div><!-- end staff-card -->
+
+            <!-- ---- Staff Member 4 ---- -->
+            <div class="staff-card">
+                <div class="staff-photo-placeholder">Photo</div>
+                <h3>Emma Wright</h3>
+                <p class="job-title">Project Manager</p>
+                <p>Emma keeps all our projects on track. She liaises between clients and the
+                   development team to ensure smooth delivery and happy customers.</p>
+                <p style="margin-top:6px; font-size:12px; color:#0058a3;">
+                    <strong>Skills:</strong> Agile, Communication, MS Project, JIRA
+                </p>
+            </div><!-- end staff-card -->
+
+            <!-- ---- Staff Member 5 ---- -->
+            <div class="staff-card">
+                <div class="staff-photo-placeholder">Photo</div>
+                <h3>Tom Nguyen</h3>
+                <p class="job-title">Junior Developer</p>
+                <p>Tom recently joined us after completing his computer science degree.
+                   He is enthusiastic, fast-learning, and works across front-end projects.</p>
+                <p style="margin-top:6px; font-size:12px; color:#0058a3;">
+                    <strong>Skills:</strong> HTML, CSS, JavaScript, React
+                </p>
+            </div><!-- end staff-card -->
+
+            <!-- ---- Staff Member 6 ---- -->
+            <div class="staff-card">
+                <div class="staff-photo-placeholder">Photo</div>
+                <h3>Lisa Brown</h3>
+                <p class="job-title">Content Manager</p>
+                <p>Lisa manages website content for our clients. She has a background in
+                   digital marketing and ensures all content is clear and engaging.</p>
+                <p style="margin-top:6px; font-size:12px; color:#0058a3;">
+                    <strong>Skills:</strong> Copywriting, SEO, WordPress, Analytics
+                </p>
+            </div><!-- end staff-card -->
+
+        </div><!-- end .staff-grid -->
+
+    </div><!-- end #main-content -->
+
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <div id="footer">
+        &copy; chivovoHGSS 2026 Hot Beans Web Ltd. All rights reserved. |
+        <a href="contact.html">Contact Us</a> |
+        <a href="about.html">About</a> |
+        <a href="joinus.html">Join Us</a>
+    </div><!-- end #footer -->
+
+    <!-- Local JavaScript file -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

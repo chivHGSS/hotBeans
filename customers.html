@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web - Customers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header">
+        <div id="logo">
+            <svg id="logo-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="44" height="28" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
+                <line x1="30" y1="38" x2="30" y2="48" stroke="white" stroke-width="2.5"/>
+                <line x1="20" y1="48" x2="40" y2="48" stroke="white" stroke-width="2.5"/>
+                <polyline points="18,28 30,16 42,28" fill="none" stroke="white" stroke-width="2"/>
+                <rect x="26" y="24" width="8" height="8" fill="none" stroke="white" stroke-width="1.5"/>
+            </svg>
+            <span id="site-name">Hot Beans</span>
+        </div>
+        <div id="login-box">
+            <label>Username <input type="text"></label>
+            <label>Password <input type="password"></label>
+            <span id="forgot-password">(forgot password?)</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION — CUSTOMERS is active -->
+    <div id="navbar">
+        <a href="index.html">HOME</a>
+        <a href="news.html">NEWS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="staff.html">STAFF</a>
+        <!-- CUSTOMERS is the current page -->
+        <a href="customers.html" class="active">CUSTOMERS</a>
+        <a href="joinus.html">JOIN US</a>
+        <a href="about.html">ABOUT</a>
+        <div id="nav-search">
+            <div id="search-form">
+                <input type="text" id="search-input" placeholder="Search..." onkeypress="searchKeyPress(event)">
+                <button id="search-btn" onclick="doSearch()">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+
+        <h1 class="page-heading">Our Customers</h1>
+
+        <!-- Introduction -->
+        <div class="card">
+            <p>We are proud to work with a wide range of businesses across the UK.
+               Here is what some of our customers have to say about us.</p>
+        </div>
+
+        <!-- Customer testimonials in a two-column layout -->
+        <div class="three-col">
+
+            <div style="flex:1;">
+
+                <!-- Testimonial 1 -->
+                <div class="card">
+                    <h2>ABC Retail Ltd</h2>
+                    <!-- Quote from customer -->
+                    <p style="font-style:italic; color:#444;">
+                        "Hot Beans Web transformed our outdated website into a modern, fast and easy-to-use
+                        site. Our online sales have increased by 40% since the relaunch. Highly recommended!"
+                    </p>
+                    <p style="text-align:right; font-size:13px; color:#0058a3; margin-top:8px;">
+                        — John Smith, Managing Director
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card">
+                    <h2>Green Gardens Nursery</h2>
+                    <p style="font-style:italic; color:#444;">
+                        "From our very first meeting, the team at Hot Beans Web understood exactly what we needed.
+                        They delivered on time and the website looks fantastic. Our customers love it!"
+                    </p>
+                    <p style="text-align:right; font-size:13px; color:#0058a3; margin-top:8px;">
+                        — Maria Jones, Owner
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="flex:1;">
+
+                <!-- Testimonial 3 -->
+                <div class="card">
+                    <h2>City Fitness Club</h2>
+                    <p style="font-style:italic; color:#444;">
+                        "We had a tight deadline and a limited budget, but Hot Beans Web delivered a brilliant
+                        website that exceeded our expectations. The support after launch has been excellent too."
+                    </p>
+                    <p style="text-align:right; font-size:13px; color:#0058a3; margin-top:8px;">
+                        — Paul Davis, Club Manager
+                    </p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="card">
+                    <h2>Premier Plumbing Services</h2>
+                    <p style="font-style:italic; color:#444;">
+                        "As a small business we were worried about the cost of a new website, but Hot Beans
+                        Web offered us an affordable package that was perfect. We now get enquiries every day!"
+                    </p>
+                    <p style="text-align:right; font-size:13px; color:#0058a3; margin-top:8px;">
+                        — Steve Turner, Director
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div><!-- end #main-content -->
+
+    <!-- FOOTER -->
+    <div id="footer">
+        &copy; chivovoHGSS 2026 Hot Beans Web Ltd. All rights reserved. |
+        <a href="contact.html">Contact Us</a> |
+        <a href="about.html">About</a> |
+        <a href="joinus.html">Join Us</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

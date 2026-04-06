@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web - News</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header">
+        <div id="logo">
+            <svg id="logo-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="44" height="28" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
+                <line x1="30" y1="38" x2="30" y2="48" stroke="white" stroke-width="2.5"/>
+                <line x1="20" y1="48" x2="40" y2="48" stroke="white" stroke-width="2.5"/>
+                <polyline points="18,28 30,16 42,28" fill="none" stroke="white" stroke-width="2"/>
+                <rect x="26" y="24" width="8" height="8" fill="none" stroke="white" stroke-width="1.5"/>
+            </svg>
+            <span id="site-name">Hot Beans</span>
+        </div>
+        <div id="login-box">
+            <label>Username <input type="text"></label>
+            <label>Password <input type="password"></label>
+            <span id="forgot-password">(forgot password?)</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION — NEWS is active -->
+    <div id="navbar">
+        <a href="index.html">HOME</a>
+        <!-- NEWS is the current page -->
+        <a href="news.html" class="active">NEWS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="staff.html">STAFF</a>
+        <a href="customers.html">CUSTOMERS</a>
+        <a href="joinus.html">JOIN US</a>
+        <a href="about.html">ABOUT</a>
+        <div id="nav-search">
+            <div id="search-form">
+                <input type="text" id="search-input" placeholder="Search..." onkeypress="searchKeyPress(event)">
+                <button id="search-btn" onclick="doSearch()">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+
+        <h1 class="page-heading">Latest News</h1>
+
+        <!-- News article 1 -->
+        <div class="card">
+            <h2>Hot Beans Web Wins Regional Business Award</h2>
+            <!-- Date of news item -->
+            <p style="font-size:12px; color:#666; font-family:Arial; margin-bottom:8px;">15 November 2024</p>
+            <p>We are delighted to announce that Hot Beans Web has been awarded the Best Small Business
+               in Technology award at this year's regional business awards ceremony held in London.</p>
+            <p>The award recognises our commitment to delivering excellent web development services
+               to our clients and our growing reputation across the UK.</p>
+        </div>
+
+        <!-- News article 2 -->
+        <div class="card">
+            <h2>New Service: E-Commerce Website Packages</h2>
+            <p style="font-size:12px; color:#666; font-family:Arial; margin-bottom:8px;">3 October 2024</p>
+            <p>Hot Beans Web is pleased to launch a new range of e-commerce website packages for small
+               and medium-sized businesses. Our new packages include everything needed to start selling
+               online, from design to payment processing setup.</p>
+            <p>Contact us for a free consultation and quote.</p>
+        </div>
+
+        <!-- News article 3 -->
+        <div class="card">
+            <h2>We Are Hiring!</h2>
+            <p style="font-size:12px; color:#666; font-family:Arial; margin-bottom:8px;">1 September 2024</p>
+            <p>Hot Beans Web is expanding and we are currently looking for talented junior web developers
+               to join our team. If you have a passion for web development and want to work in a friendly,
+               fast-paced environment, we want to hear from you.</p>
+            <!-- Link to the Join Us page -->
+            <p>Visit our <a href="joinus.html">Join Us</a> page to find out more and apply.</p>
+        </div>
+
+    </div><!-- end #main-content -->
+
+    <!-- FOOTER -->
+    <div id="footer">
+        &copy; chivovoHGSS 2026 Hot Beans Web Ltd. All rights reserved. |
+        <a href="contact.html">Contact Us</a> |
+        <a href="about.html">About</a> |
+        <a href="joinus.html">Join Us</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
